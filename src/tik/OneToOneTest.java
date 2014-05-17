@@ -60,7 +60,7 @@ public class OneToOneTest extends JDialog implements ActionListener {
         answers.add(thrdButton);
 
         nextQuestion = new JButton("Next >");           // добавляем кнопку далее
-        nextQuestion.addActionListener(this);           // устанавлимем обработчиком клика объект этого класса
+        nextQuestion.addActionListener(this);           // устанавливаем обработчиком клика объект этого класса
 
         JPanel southPanel = new JPanel(new BorderLayout());     // создаем для кнопки панель
         southPanel.add(BorderLayout.EAST, nextQuestion);
@@ -68,8 +68,8 @@ public class OneToOneTest extends JDialog implements ActionListener {
         JPanel mainPanel = new JPanel();                // создаем главную панель
         mainPanel.setLayout(new BorderLayout(10, 10));
 
-        mainPanel.add(questionPanel, BorderLayout.CENTER);      // добалвяем в нее вопросы
-        mainPanel.add(southPanel, BorderLayout.SOUTH);          // и панель с кнопкой
+        mainPanel.add(questionPanel, BorderLayout.CENTER);      // добалвяем в центр вопросы
+        mainPanel.add(southPanel, BorderLayout.SOUTH);          // и вниз панель с кнопкой
 
         add(mainPanel);                                 // добавляем во фрейм главную панель
 
@@ -84,7 +84,7 @@ public class OneToOneTest extends JDialog implements ActionListener {
             BufferedReader reader = new BufferedReader( // открытие потока чтения
                     new FileReader(new File(fileName)));
 
-            question.setText(reader.readLine());        // чтение тестового вопроса
+            question.setText(reader.readLine());        // чтение вопроса теста
             fstButton.setText(reader.readLine());       // и вариантов ответа
             scndButton.setText(reader.readLine());
             thrdButton.setText(reader.readLine());
