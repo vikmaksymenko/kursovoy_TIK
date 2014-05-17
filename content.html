@@ -1,0 +1,68 @@
+employer
+
+INSERT INTO `employer` (`surname`, `name`, `patronymic`, `post`, `length_of_work`, `inn`, `passport_number`, `family_composition`, `date_of_birth`, `passport_location`, `actual_locations`, `phone`, `education`) 
+VALUES ('Ivanov', 'Ivan', 'Henry', 'web-dev', 3, '123456789011', '12345678' , 'not married', '1995-03-29', 'NY', 'Odesa', '1234567890', 'MTU');
+
+INSERT INTO `employer` (`surname`, `name`, `patronymic`, `post`, `length_of_work`, `inn`, `passport_number`, `family_composition`, `date_of_birth`, `passport_location`, `actual_locations`, `phone`, `education`) 
+VALUES ('Иванов', 'Иван', 'Иванович', 'веб-дизайнер', 3, '123456789011', '12345678' , 'не женат', '1995-03-29', 'ОДесса', 'Киев', '1234567890', 'ОНПУ');
+
+INSERT INTO `employer` (`surname`, `name`, `patronymic`, `post`, `length_of_work`, `inn`, `passport_number`, `family_composition`, `date_of_birth`, `passport_location`, `actual_locations`, `phone`, `education`) 
+VALUES ('Петров', 'Петр', 'Петрович', 'дизайнер БД', 5, '098765432121', '87654321' , 'не женат', '1989-03-04', 'ОДесса', 'Киев', '1234567890', 'ОНПУ');
+
+INSERT INTO `employer` (`surname`, `name`, `patronymic`, `post`, `length_of_work`, `inn`, `passport_number`, `family_composition`, `date_of_birth`, `passport_location`, `actual_locations`, `phone`, `education`) 
+VALUES ('Сидоров', 'Сидор', 'Сидорович', 'TL', 12, '098765432121', '87654321' , 'не женат', '1967-12-12', 'ОДесса', 'Харьков', '1234567890', 'ХНУРЭ');
+
+timesheet
+
+INSERT INTO `timesheet` (`period`, `work_days`, `actually_worked_days`, `weekends`, `personnel_number`)
+VALUE ('2014-05-26', 25, 23, 8, 4);
+
+INSERT INTO `timesheet` (`period`, `work_days`, `actually_worked_days`, `weekends`, `personnel_number`)
+VALUE ('2014-05-26', 23, 21, 8, 3);
+
+INSERT INTO `timesheet` (`period`, `work_days`, `actually_worked_days`, `weekends`, `personnel_number`)
+VALUE ('2014-05-26', 27, 27, 6, 2);
+
+INSERT INTO `timesheet` (`period`, `work_days`, `actually_worked_days`, `weekends`, `personnel_number`)
+VALUE ('2014-05-26', 25, 24, 8, 1);
+
+training 
+
+INSERT INTO `training` (`type_of_translation`, `former_place_of_work`, `new_job`, `conversion_base`, `personnel_number`)
+VALUE ('повышение', 'отдел разработки', 'Ведущий разработчик', 'уход предыдущего ведущего разработчика в другой проект', 4);
+
+INSERT INTO `training` (`type_of_translation`, `former_place_of_work`, `new_job`, `conversion_base`, `personnel_number`)
+VALUE ('повышение', 'отдел разработки', 'ТЛ', 'открытие нового отдела', 4);
+
+labor_contract 
+
+INSERT INTO `labor_contract` 
+VALUE (1, 'LUXOFT', '2011-12-12', '2011-12-27', 2000.00, 0.0, 0.0, 1);
+
+INSERT INTO `labor_contract` 
+VALUE (2, 'LUXOFT', '2009-02-24', '2009-02-27', 4000.00, 0.0, 'наличие открытой вакансии', 4);
+
+INSERT INTO `labor_contract` 
+VALUE (3, 'LUXOFT', '2011-12-12', '2011-12-27', 2000.00, 0.0, 'наличие открытой вакансии', 3);
+
+INSERT INTO `labor_contract` 
+VALUE (4, 'LUXOFT', '2011-12-12', '2011-12-27', 2000.00, 0.0, 'наличие открытой вакансии', 2);
+
+sick_leave
+
+INSERT INTO `sick_leave`
+VALUE (1, '2014-03-01', '2014-03-22', 'орви', 'QWE123456', 2);
+INSERT INTO `sick_leave`
+VALUE (2, '2013-03-01', '2013-03-22', 'орви', 'QWE456678', 2);
+
+vacation
+INSERT INTO `vacation`
+VALUE (1, '2013-03-01', '2013-03-22', 1, 4);
+
+INSERT INTO `vacation`
+VALUE (2, '2014-03-01', '2014-03-22', 1, 4);
+
+dismissal
+
+INSERT INTO `dismissal`
+VALUE (1, '2014-03-01', '2014-03-05', 'переход на новое место работы', 0, 1);
