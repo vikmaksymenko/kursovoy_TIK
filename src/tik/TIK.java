@@ -6,6 +6,6 @@ public class TIK {
     static ProblemExample p1;                               //окно примера задачи
 
     public static void main(String[] args) {
-        t1 = new Theory("Метод Шерман", "content.html");    //вывод теории
+        t1 = new Theory("Метод Хаффмена", "content.html");    //вывод теории
     }
 }
