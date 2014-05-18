@@ -1,12 +1,12 @@
 package tik;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -47,10 +47,14 @@ public class ManyToManyTest extends JDialog implements ActionListener {
         }
 
         JPanel questionPanel = new JPanel();                // создаем паель вариантов
-        questionPanel.setLayout(new GridLayout(4, 3));      // устанавливаем табличный компоновщик
+        questionPanel.setLayout(new BoxLayout(questionPanel, BoxLayout.Y_AXIS));      // устанавливаем табличный компоновщик
+        
         for (int i = 0; i < 4; i++) {
-            questionPanel.add(fstCol[i]);                   // добавляем в нее варианты
-            questionPanel.add(variants[i]);                 // и списки
+            JPanel tmp = new JPanel();
+            tmp.setLayout(new BorderLayout());
+            tmp.add(fstCol[i], BorderLayout.CENTER);                   // добавляем в нее варианты
+            tmp.add(variants[i], BorderLayout.EAST);                 // и списки
+            questionPanel.add(tmp);
         }
 
         nextQuestion = new JButton("Next >");               // добавляем кнопку далее       
@@ -68,9 +72,10 @@ public class ManyToManyTest extends JDialog implements ActionListener {
 
         add(mainPanel);                                     // добавляем во фрейм главную панель
 
-        setSize(400, 300);                                  // размер
+       // setSize(400, 300);                                  // размер
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); // действие по закрытию
         setLocationRelativeTo(null);                        // позиция на экране
+        pack();                                             // подгон диалога к нужному размеру 
         setVisible(true);                                   // видимость
     }
 
